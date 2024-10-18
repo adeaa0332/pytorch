@@ -143,7 +143,7 @@ void Dict<Key, Value>::erase(iterator iter) const {
 }
 
 template<class Key, class Value>
-C10_NODISCARD size_t Dict<Key, Value>::erase(const Key& key) const {
+[[nodiscard]] size_t Dict<Key, Value>::erase(const Key& key) const {
   return impl_->dict.erase(key);
 }
 
